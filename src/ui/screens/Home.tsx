@@ -18,6 +18,7 @@ export function Home({ onOpenLesson }: { onOpenLesson: (id: string) => void }) {
       <header className="top-header">
         <h1>Portu</h1>
         <p className="subtitle">Portugués 🇧🇷🇵🇹 para hispanohablantes · MCER</p>
+        <p className="byline">Hecho por Fernando Rodríguez Escalona</p>
       </header>
 
       <div className="card variant-picker">
