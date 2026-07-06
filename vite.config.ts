@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  // En GitHub Pages la app vive en /portu/; en local sigue en /.
+  // El workflow de despliegue define PORTU_BASE=/portu/.
+  base: process.env.PORTU_BASE ?? '/',
   plugins: [
     react(),
     VitePWA({
