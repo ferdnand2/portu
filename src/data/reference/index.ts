@@ -1,4 +1,7 @@
 import type { RefSection } from '../../domain/reference';
+import { adjetivos } from './adjetivos';
+import { adverbios } from './adverbios';
+import { expresiones } from './expresiones';
 import { pronombres } from './pronombres';
 import { contracciones } from './contracciones';
 
@@ -7,7 +10,13 @@ import { contracciones } from './contracciones';
  * pantalla propia (fonemas, verbos) se registran como accesos en
  * `REF_SHORTCUTS` y viven en sus componentes.
  */
-export const REF_SECTIONS: RefSection[] = [pronombres, contracciones];
+export const REF_SECTIONS: RefSection[] = [
+  adjetivos,
+  adverbios,
+  pronombres,
+  contracciones,
+  expresiones,
+];
 
 export function findRefSection(id: string): RefSection | undefined {
   return REF_SECTIONS.find((s) => s.id === id);
