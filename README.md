@@ -1,5 +1,8 @@
 # Portu 🇧🇷🇵🇹
 
+**App en vivo: https://ferdnand2.github.io/portu/** (se despliega sola con
+cada push a `main` vía GitHub Actions).
+
 Curso de portugués para hispanohablantes que distingue **siempre** entre el
 portugués de Brasil y el de Portugal, organizado por niveles del **MCER**
 (A1 → C1) y cubriendo las **4 habilidades**: leer, escribir, escuchar y hablar.
