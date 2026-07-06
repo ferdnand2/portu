@@ -11,13 +11,16 @@ import { LessonScreen } from './ui/screens/LessonScreen';
 import { PhonemesScreen } from './ui/screens/PhonemesScreen';
 import { ReferenceHome } from './ui/screens/ReferenceHome';
 import { ReferenceSectionScreen } from './ui/screens/ReferenceSectionScreen';
+import { VerbDetailScreen, VerbsScreen } from './ui/screens/VerbsScreen';
+import { findVerb } from './data/reference/verbos';
 
 type Route =
   | { name: 'home' }
   | { name: 'lesson'; lessonId: string }
   | { name: 'exam'; levelId: LevelId }
   | { name: 'reference' }
-  | { name: 'ref-section'; sectionId: string };
+  | { name: 'ref-section'; sectionId: string }
+  | { name: 'verb'; verbId: string };
 
 export default function App() {
   const [route, setRoute] = useState<Route>({ name: 'home' });
@@ -46,12 +49,27 @@ export default function App() {
   } else if (route.name === 'ref-section') {
     if (route.sectionId === 'fonemas') {
       screen = <PhonemesScreen onBack={goReference} />;
+    } else if (route.sectionId === 'verbos') {
+      screen = (
+        <VerbsScreen
+          onBack={goReference}
+          onOpenVerb={(verbId) => setRoute({ name: 'verb', verbId })}
+        />
+      );
     } else {
       const section = findRefSection(route.sectionId);
       screen = section ? (
         <ReferenceSectionScreen section={section} onBack={goReference} />
       ) : undefined;
     }
+  } else if (route.name === 'verb') {
+    const verb = findVerb(route.verbId);
+    screen = verb ? (
+      <VerbDetailScreen
+        verb={verb}
+        onBack={() => setRoute({ name: 'ref-section', sectionId: 'verbos' })}
+      />
+    ) : undefined;
   }
 
   return (
