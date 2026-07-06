@@ -11,23 +11,47 @@ export const leccion2: Lesson = {
       id: 'v-chamar',
       es: 'me llamo…',
       forms: [
-        { text: 'eu me chamo…', variant: 'br', note: 'Pronombre antes del verbo.' },
-        { text: 'chamo-me…', variant: 'pt', note: 'Pronombre después del verbo, con guion.' },
+        {
+          text: 'eu me chamo…',
+          variant: 'br',
+          ipa: { br: 'ew mi ˈʃɐ.mu' },
+          note: 'Pronombre antes del verbo.',
+        },
+        {
+          text: 'chamo-me…',
+          variant: 'pt',
+          ipa: { pt: 'ˈʃɐ.mu mə' },
+          note: 'Pronombre después del verbo, con guion.',
+        },
       ],
       example: { br: 'Eu me chamo Ana.', pt: 'Chamo-me Ana.', es: 'Me llamo Ana.' },
     },
     {
       id: 'v-nome',
       es: 'mi nombre es…',
-      forms: [{ text: 'o meu nome é…', variant: 'both' }],
+      forms: [
+        {
+          text: 'o meu nome é…',
+          variant: 'both',
+          ipa: { br: 'u mew ˈno.mi ˈɛ', pt: 'u mew ˈno.mə ˈɛ' },
+        },
+      ],
       example: { both: 'O meu nome é Fernando.', es: 'Mi nombre es Fernando.' },
     },
     {
       id: 'v-como-chama',
       es: '¿cómo te llamas?',
       forms: [
-        { text: 'Como você se chama?', variant: 'br' },
-        { text: 'Como te chamas?', variant: 'pt' },
+        {
+          text: 'Como você se chama?',
+          variant: 'br',
+          ipa: { br: 'ˈko.mu voˈse si ˈʃɐ.mɐ' },
+        },
+        {
+          text: 'Como te chamas?',
+          variant: 'pt',
+          ipa: { pt: 'ˈko.mu tə ˈʃɐ.mɐʃ' },
+        },
       ],
     },
     {
@@ -37,6 +61,7 @@ export const leccion2: Lesson = {
         {
           text: 'prazer / muito prazer',
           variant: 'both',
+          ipa: { br: 'pɾaˈzeʁ', pt: 'pɾɐˈzeɾ' },
           note: 'Literalmente «placer». Respuesta habitual: «O prazer é meu».',
         },
       ],
@@ -45,14 +70,28 @@ export const leccion2: Lesson = {
       id: 'v-de-onde',
       es: '¿de dónde eres?',
       forms: [
-        { text: 'De onde você é?', variant: 'br' },
-        { text: 'De onde és?', variant: 'pt' },
+        {
+          text: 'De onde você é?',
+          variant: 'br',
+          ipa: { br: 'dʒi ˈõ.dʒi voˈse ˈɛ' },
+        },
+        {
+          text: 'De onde és?',
+          variant: 'pt',
+          ipa: { pt: 'də ˈõ.də ˈɛʃ' },
+        },
       ],
     },
     {
       id: 'v-sou-de',
       es: 'soy de…',
-      forms: [{ text: 'eu sou de…', variant: 'both' }],
+      forms: [
+        {
+          text: 'eu sou de…',
+          variant: 'both',
+          ipa: { br: 'ew ˈsow dʒi', pt: 'ew ˈsow də' },
+        },
+      ],
       example: { both: 'Eu sou de Caracas.', es: 'Soy de Caracas.' },
     },
     {
@@ -62,6 +101,7 @@ export const leccion2: Lesson = {
         {
           text: 'moro em…',
           variant: 'both',
+          ipa: { br: 'ˈmɔ.ɾu ẽj̃', pt: 'ˈmɔ.ɾu ɐ̃j̃' },
           note: 'De «morar» (residir). «Vivo em…» también se entiende.',
         },
       ],
@@ -70,7 +110,13 @@ export const leccion2: Lesson = {
     {
       id: 'v-falar',
       es: 'hablar',
-      forms: [{ text: 'falar', variant: 'both' }],
+      forms: [
+        {
+          text: 'falar',
+          variant: 'both',
+          ipa: { br: 'faˈlaʁ', pt: 'fɐˈlaɾ' },
+        },
+      ],
       example: {
         both: 'Falo espanhol e um pouco de português.',
         es: 'Hablo español y un poco de portugués.',
@@ -79,12 +125,16 @@ export const leccion2: Lesson = {
     {
       id: 'v-um-pouco',
       es: 'un poco',
-      forms: [{ text: 'um pouco', variant: 'both' }],
+      forms: [
+        { text: 'um pouco', variant: 'both', ipa: { br: 'ũ ˈpo.ku' } },
+      ],
     },
     {
       id: 'v-sim-nao',
       es: 'sí / no',
-      forms: [{ text: 'sim / não', variant: 'both' }],
+      forms: [
+        { text: 'sim / não', variant: 'both', ipa: { br: 'sĩ / nɐ̃w̃' } },
+      ],
     },
     {
       id: 'v-senhor',
@@ -93,6 +143,10 @@ export const leccion2: Lesson = {
         {
           text: 'senhor / senhora',
           variant: 'both',
+          ipa: {
+            br: 'siˈɲoʁ / siˈɲɔ.ɾɐ',
+            pt: 'səˈɲoɾ / səˈɲɔ.ɾɐ',
+          },
           note: 'Con artículo se vuelve el «usted» formal: «o senhor», «a senhora».',
         },
       ],
@@ -101,8 +155,8 @@ export const leccion2: Lesson = {
       id: 'v-e-voce',
       es: '¿y tú?',
       forms: [
-        { text: 'e você?', variant: 'br' },
-        { text: 'e tu?', variant: 'pt' },
+        { text: 'e você?', variant: 'br', ipa: { br: 'i voˈse' } },
+        { text: 'e tu?', variant: 'pt', ipa: { pt: 'i ˈtu' } },
       ],
     },
   ],
@@ -151,8 +205,18 @@ export const leccion2: Lesson = {
       explanation:
         'El rasgo que más cuesta al oído hispano: en Portugal las vocales átonas se reducen o desaparecen, mientras que en Brasil se pronuncian todas con claridad. Por eso el portugués europeo suena «apurado» y el brasileño, «cantado».',
       samples: [
-        { text: 'telefone', variant: 'br', hint: 'te-le-fô-ni (todas las vocales claras)' },
-        { text: 'telefone', variant: 'pt', hint: 't’lefón (las átonas casi desaparecen)' },
+        {
+          text: 'telefone',
+          variant: 'br',
+          ipa: 'te.leˈfo.ni',
+          hint: 'te-le-fô-ni (todas las vocales claras)',
+        },
+        {
+          text: 'telefone',
+          variant: 'pt',
+          ipa: 'tə.ləˈfɔ.nə',
+          hint: 't’lefón (las átonas casi desaparecen)',
+        },
       ],
     },
     {
@@ -161,8 +225,8 @@ export const leccion2: Lesson = {
       explanation:
         'La «s» al final de sílaba o palabra suena /s/ en la mayor parte de Brasil, pero /sh/ en Portugal (y también en Río de Janeiro): «português» termina en «sh» en Lisboa.',
       samples: [
-        { text: 'português', variant: 'br', hint: 'portuguêis' },
-        { text: 'português', variant: 'pt', hint: 'purtuguêsh' },
+        { text: 'português', variant: 'br', ipa: 'poʁ.tuˈges', hint: 'português' },
+        { text: 'português', variant: 'pt', ipa: 'puɾ.tuˈgeʃ', hint: 'purtuguêsh' },
       ],
     },
   ],

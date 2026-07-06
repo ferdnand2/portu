@@ -20,6 +20,12 @@ export interface TermForm {
   variant: Variant;
   /** Matiz de uso, en español. */
   note?: string;
+  /**
+   * Transcripción fonética (AFI) por acento. Si la forma suena igual en
+   * ambas variantes basta con dar una; si difieren, se dan las dos.
+   * Los símbolos deben existir en el catálogo de `domain/ipa.ts`.
+   */
+  ipa?: { br?: string; pt?: string };
 }
 
 /**
@@ -59,6 +65,8 @@ export interface PronunciationSample {
   variant: Variant;
   /** Cómo suena, en aproximación para hispanohablantes. */
   hint?: string;
+  /** Transcripción fonética (AFI) de la muestra en esta variante. */
+  ipa?: string;
 }
 
 export interface PronunciationNote {

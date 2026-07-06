@@ -1,6 +1,7 @@
 import type { TermForm, VocabItem } from '../../domain/content';
 import { FormAudio } from '../components/AudioButton';
 import { ExampleView } from '../components/ExampleView';
+import { FormIpa } from '../components/IpaText';
 import { VariantBadge } from '../components/VariantBadge';
 import { useProgress } from '../hooks/useProgress';
 
@@ -16,6 +17,9 @@ export function VocabSection({ vocab }: { vocab: VocabItem[] }) {
   const main = state.settings.mainVariant;
   return (
     <div className="section">
+      <p className="notice">
+        🔤 Toca cualquier símbolo de la pronunciación /así/ para ver cómo suena.
+      </p>
       {vocab.map((item) => (
         <div className="card vocab-card" key={item.id}>
           <div className="vocab-es">{item.es}</div>
@@ -24,6 +28,7 @@ export function VocabSection({ vocab }: { vocab: VocabItem[] }) {
               <VariantBadge variant={form.variant} />
               <span className="pt-text">{form.text}</span>
               <FormAudio text={form.text} variant={form.variant} />
+              <FormIpa form={form} />
               {form.note && <div className="note">{form.note}</div>}
             </div>
           ))}

@@ -11,6 +11,7 @@ Receta que funcionó (Windows, sin descargar navegadores de Playwright):
 npm run build                      # tsc --noEmit + vite build (+ PWA)
 npm run preview -- --port 4173 --strictPort   # en segundo plano
 node scripts/verify-drive.mjs      # recorrido E2E + capturas en .verify-shots/
+node scripts/verify-ipa.mjs        # transcripciones AFI interactivas (hoja por símbolo)
 ```
 
 `scripts/verify-drive.mjs` usa `chromium.launch({ channel: 'msedge', headless: true })`

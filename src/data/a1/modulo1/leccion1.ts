@@ -10,7 +10,9 @@ export const leccion1: Lesson = {
     {
       id: 'v-ola',
       es: 'hola',
-      forms: [{ text: 'olá', variant: 'both' }],
+      forms: [
+        { text: 'olá', variant: 'both', ipa: { br: 'oˈla', pt: 'ɔˈla' } },
+      ],
       example: { both: 'Olá, tudo bem?', es: 'Hola, ¿qué tal?' },
     },
     {
@@ -20,6 +22,7 @@ export const leccion1: Lesson = {
         {
           text: 'oi',
           variant: 'br',
+          ipa: { br: 'oj' },
           note: 'Muy común en Brasil; en Portugal suena claramente brasileño.',
         },
       ],
@@ -28,12 +31,24 @@ export const leccion1: Lesson = {
     {
       id: 'v-bom-dia',
       es: 'buenos días',
-      forms: [{ text: 'bom dia', variant: 'both' }],
+      forms: [
+        {
+          text: 'bom dia',
+          variant: 'both',
+          ipa: { br: 'bõ ˈdʒi.ɐ', pt: 'bõ ˈdi.ɐ' },
+        },
+      ],
     },
     {
       id: 'v-boa-tarde',
       es: 'buenas tardes',
-      forms: [{ text: 'boa tarde', variant: 'both' }],
+      forms: [
+        {
+          text: 'boa tarde',
+          variant: 'both',
+          ipa: { br: 'ˈbo.ɐ ˈtaɾ.dʒi', pt: 'ˈbo.ɐ ˈtaɾ.də' },
+        },
+      ],
     },
     {
       id: 'v-boa-noite',
@@ -42,6 +57,7 @@ export const leccion1: Lesson = {
         {
           text: 'boa noite',
           variant: 'both',
+          ipa: { br: 'ˈbo.ɐ ˈnoj.tʃi', pt: 'ˈbo.ɐ ˈnoj.tə' },
           note: 'Se usa tanto al llegar como al despedirse por la noche.',
         },
       ],
@@ -50,10 +66,16 @@ export const leccion1: Lesson = {
       id: 'v-tchau',
       es: 'chao / adiós (informal)',
       forms: [
-        { text: 'tchau', variant: 'br', note: 'La despedida informal estándar en Brasil.' },
+        {
+          text: 'tchau',
+          variant: 'br',
+          ipa: { br: 'tʃaw' },
+          note: 'La despedida informal estándar en Brasil.',
+        },
         {
           text: 'adeus',
           variant: 'pt',
+          ipa: { pt: 'ɐˈdewʃ' },
           note: 'En Brasil «adeus» suena definitivo, como si no fueran a verse más.',
         },
       ],
@@ -62,14 +84,29 @@ export const leccion1: Lesson = {
       id: 'v-ate-logo',
       es: 'hasta luego',
       forms: [
-        { text: 'até logo', variant: 'both' },
-        { text: 'até já', variant: 'pt', note: 'Si van a verse muy pronto, en un rato.' },
+        {
+          text: 'até logo',
+          variant: 'both',
+          ipa: { br: 'aˈtɛ ˈlɔ.gu', pt: 'ɐˈtɛ ˈlɔ.gu' },
+        },
+        {
+          text: 'até já',
+          variant: 'pt',
+          ipa: { pt: 'ɐˈtɛ ˈʒa' },
+          note: 'Si van a verse muy pronto, en un rato.',
+        },
       ],
     },
     {
       id: 'v-ate-amanha',
       es: 'hasta mañana',
-      forms: [{ text: 'até amanhã', variant: 'both' }],
+      forms: [
+        {
+          text: 'até amanhã',
+          variant: 'both',
+          ipa: { br: 'aˈtɛ a.mɐˈɲɐ̃', pt: 'ɐˈtɛ ɐ.mɐˈɲɐ̃' },
+        },
+      ],
     },
     {
       id: 'v-obrigado',
@@ -78,6 +115,10 @@ export const leccion1: Lesson = {
         {
           text: 'obrigado / obrigada',
           variant: 'both',
+          ipa: {
+            br: 'o.bɾiˈga.du / o.bɾiˈga.dɐ',
+            pt: 'u.bɾiˈga.du / u.bɾiˈga.dɐ',
+          },
           note: 'Concuerda con quien habla: hombre «obrigado», mujer «obrigada».',
         },
       ],
@@ -87,14 +128,29 @@ export const leccion1: Lesson = {
       id: 'v-por-favor',
       es: 'por favor',
       forms: [
-        { text: 'por favor', variant: 'both' },
-        { text: 'se faz favor', variant: 'pt', note: 'Muy típica de Portugal.' },
+        {
+          text: 'por favor',
+          variant: 'both',
+          ipa: { br: 'poʁ faˈvoʁ', pt: 'puɾ fɐˈvoɾ' },
+        },
+        {
+          text: 'se faz favor',
+          variant: 'pt',
+          ipa: { pt: 'sə faʃ fɐˈvoɾ' },
+          note: 'Muy típica de Portugal.',
+        },
       ],
     },
     {
       id: 'v-de-nada',
       es: 'de nada',
-      forms: [{ text: 'de nada', variant: 'both' }],
+      forms: [
+        {
+          text: 'de nada',
+          variant: 'both',
+          ipa: { br: 'dʒi ˈna.dɐ', pt: 'də ˈna.dɐ' },
+        },
+      ],
     },
     {
       id: 'v-desculpe',
@@ -103,6 +159,10 @@ export const leccion1: Lesson = {
         {
           text: 'desculpe / desculpa',
           variant: 'both',
+          ipa: {
+            br: 'dʒisˈkuw.pi / dʒisˈkuw.pɐ',
+            pt: 'dəʃˈkul.pə / dəʃˈkul.pɐ',
+          },
           note: '«Desculpe» es formal (usted); «desculpa», informal (tú).',
         },
       ],
@@ -110,7 +170,13 @@ export const leccion1: Lesson = {
     {
       id: 'v-com-licenca',
       es: 'permiso / con permiso',
-      forms: [{ text: 'com licença', variant: 'both' }],
+      forms: [
+        {
+          text: 'com licença',
+          variant: 'both',
+          ipa: { br: 'kõ liˈsẽ.sɐ' },
+        },
+      ],
       example: { both: 'Com licença, posso passar?', es: 'Permiso, ¿puedo pasar?' },
     },
     {
@@ -120,6 +186,7 @@ export const leccion1: Lesson = {
         {
           text: 'tudo bem?',
           variant: 'both',
+          ipa: { br: 'ˈtu.du ˈbẽj̃', pt: 'ˈtu.du ˈbɐ̃j̃' },
           note: 'La respuesta es igual: «Tudo bem!» o «Tudo bom!».',
         },
       ],
@@ -162,8 +229,8 @@ export const leccion1: Lesson = {
       explanation:
         'En ambas variantes, la «o» átona final se pronuncia como una «u» débil: «obrigado» suena «obrigadu», «tudo» suena «tudu».',
       samples: [
-        { text: 'obrigado', variant: 'both', hint: 'obrigádu' },
-        { text: 'tudo bem', variant: 'both', hint: 'túdu beim' },
+        { text: 'obrigado', variant: 'both', ipa: 'o.bɾiˈga.du', hint: 'obrigádu' },
+        { text: 'tudo bem', variant: 'both', ipa: 'ˈtu.du ˈbẽj̃', hint: 'túdu beim' },
       ],
     },
     {
@@ -172,8 +239,8 @@ export const leccion1: Lesson = {
       explanation:
         'La «e» átona final se convierte en «i» en Brasil y prácticamente desaparece en Portugal. Además, en Brasil «de/te» finales suenan «dyi/chi».',
       samples: [
-        { text: 'boa noite', variant: 'br', hint: 'boa nói-chi' },
-        { text: 'boa noite', variant: 'pt', hint: 'boa noit (la e casi no se oye)' },
+        { text: 'boa noite', variant: 'br', ipa: 'ˈbo.ɐ ˈnoj.tʃi', hint: 'boa nói-chi' },
+        { text: 'boa noite', variant: 'pt', ipa: 'ˈbo.ɐ ˈnoj.tə', hint: 'boa noit (la e casi no se oye)' },
       ],
     },
     {
@@ -182,8 +249,8 @@ export const leccion1: Lesson = {
       explanation:
         'En la mayor parte de Brasil, «d» y «t» ante el sonido [i] se palatalizan: «dia» suena «dyía» (como «gia» en italiano) y «tio» suena «chío». En Portugal se pronuncian como en español.',
       samples: [
-        { text: 'bom dia', variant: 'br', hint: 'bom dyía' },
-        { text: 'bom dia', variant: 'pt', hint: 'bom día' },
+        { text: 'bom dia', variant: 'br', ipa: 'bõ ˈdʒi.ɐ', hint: 'bom dyía' },
+        { text: 'bom dia', variant: 'pt', ipa: 'bõ ˈdi.ɐ', hint: 'bom día' },
       ],
     },
     {
@@ -191,7 +258,7 @@ export const leccion1: Lesson = {
       title: 'La nasal ão',
       explanation:
         'El grupo «ão» es una vocal nasal, algo así como «áu» dicho por la nariz. Es uno de los sonidos más característicos del portugués y es igual en ambas variantes.',
-      samples: [{ text: 'não', variant: 'both', hint: 'nãu (nasal)' }],
+      samples: [{ text: 'não', variant: 'both', ipa: 'nɐ̃w̃', hint: 'nãu (nasal)' }],
     },
   ],
   exercises: [

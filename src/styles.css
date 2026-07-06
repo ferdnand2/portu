@@ -667,6 +667,115 @@ p {
   }
 }
 
+/* ---- transcripción fonética ---- */
+
+.ipa {
+  color: var(--muted);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.ipa-lines {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0 0 2px;
+}
+
+.ipa-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ipa-line .badge {
+  transform: scale(0.85);
+  transform-origin: left center;
+}
+
+.ipa-sym {
+  background: none;
+  border: none;
+  padding: 0 1px;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border-bottom: 1px dotted var(--accent);
+}
+
+.ipa-sym:hover,
+.ipa-sym:focus-visible {
+  color: var(--accent);
+  background: var(--chip-bg);
+}
+
+.ipa-big {
+  font-size: 2rem;
+  font-weight: 700;
+  background: var(--chip-bg);
+  border-radius: 12px;
+  min-width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- hoja emergente (bottom sheet) ---- */
+
+.sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 50;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.sheet {
+  background: var(--card);
+  border-radius: 18px 18px 0 0;
+  padding: 16px 16px calc(20px + env(safe-area-inset-bottom));
+  width: 100%;
+  max-width: 640px;
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.25);
+  animation: sheet-up 0.18s ease-out;
+}
+
+@keyframes sheet-up {
+  from {
+    transform: translateY(30%);
+    opacity: 0.5;
+  }
+}
+
+.sheet-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.sheet-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex: 1;
+}
+
+.sheet-close {
+  border: 1px solid var(--border);
+  background: var(--chip-bg);
+  color: var(--muted);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
 /* ---- resumen ---- */
 
 .summary {

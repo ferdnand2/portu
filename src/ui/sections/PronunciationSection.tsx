@@ -1,5 +1,6 @@
 import type { PronunciationNote } from '../../domain/content';
 import { FormAudio } from '../components/AudioButton';
+import { IpaText } from '../components/IpaText';
 import { VariantBadge } from '../components/VariantBadge';
 
 export function PronunciationSection({ notes }: { notes: PronunciationNote[] }) {
@@ -14,6 +15,7 @@ export function PronunciationSection({ notes }: { notes: PronunciationNote[] }) 
               <VariantBadge variant={sample.variant} />
               <span className="pt-text">{sample.text}</span>
               <FormAudio text={sample.text} variant={sample.variant} />
+              {sample.ipa && <IpaText ipa={sample.ipa} />}
               {sample.hint && <span className="hint">≈ {sample.hint}</span>}
             </div>
           ))}
