@@ -61,7 +61,13 @@ en `src/data/curriculum.ts`.
 `domain/content.ts`, crear su componente en `ui/exercises/` y añadir el caso
 en `ExerciseView.tsx` (el compilador avisa si falta).
 
-## Estado actual (v0.2)
+## Estado actual (v0.3)
+
+- ✅ **Sección Consulta** (barra inferior): 11 fichas de referencia con
+  buscador — adjetivos, adverbios, **conjugador de verbos** (motor de
+  conjugación completo, 54 verbos, 9 tiempos), pronombres, **fonemas**
+  con audio, contracciones, falsos amigos, divergencias BR/PT maestras,
+  números y fechas, expresiones y refranes, y ortografía/acentuación.
 
 - ✅ **Niveles A1 a B2 completos**: 26 módulos con lección (vocabulario
   etiquetado BR/PT con transcripción AFI interactiva, gramática

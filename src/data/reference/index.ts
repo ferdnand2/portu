@@ -1,7 +1,11 @@
 import type { RefSection } from '../../domain/reference';
 import { adjetivos } from './adjetivos';
 import { adverbios } from './adverbios';
+import { divergencias } from './divergencias';
 import { expresiones } from './expresiones';
+import { falsosAmigos } from './falsosAmigos';
+import { numeros } from './numeros';
+import { ortografia } from './ortografia';
 import { pronombres } from './pronombres';
 import { contracciones } from './contracciones';
 
@@ -15,7 +19,11 @@ export const REF_SECTIONS: RefSection[] = [
   adverbios,
   pronombres,
   contracciones,
+  falsosAmigos,
+  divergencias,
+  numeros,
   expresiones,
+  ortografia,
 ];
 
 export function findRefSection(id: string): RefSection | undefined {
