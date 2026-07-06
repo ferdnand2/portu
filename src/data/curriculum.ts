@@ -8,6 +8,12 @@ import { a1m5 } from './a1/m5';
 import { a1m6 } from './a1/m6';
 import { a1m7 } from './a1/m7';
 import { a1m8 } from './a1/m8';
+import { a2m1 } from './a2/m1';
+import { a2m2 } from './a2/m2';
+import { a2m3 } from './a2/m3';
+import { a2m4 } from './a2/m4';
+import { a2m5 } from './a2/m5';
+import { a2m6 } from './a2/m6';
 
 /**
  * Pensum completo. Los módulos «planned» ya tienen su lugar en la estructura;
@@ -52,14 +58,26 @@ const plannedLevel = (
   description: string,
 ): Level => ({ id, name, description, status: 'planned', modules: [] });
 
+const a2: Level = {
+  id: 'A2',
+  name: 'A2 — Plataforma',
+  description:
+    'Hablar del pasado (perfeito e imperfeito), salud, trabajo, planes y tu casa.',
+  status: 'available',
+  modules: [
+    available('a2-m1', 'El pretérito perfeito', 'Contar lo que hiciste; «hoy he comido» = «hoje comi».', [a2m1]),
+    available('a2-m2', 'El imperfeito', 'Hábitos y recuerdos; brincar y otros falsos amigos.', [a2m2]),
+    available('a2-m3', 'Salud y cuerpo', 'Dói-me 🇵🇹 / estou com dor 🇧🇷; estar com febre.', [a2m3]),
+    available('a2-m4', 'Trabajo y estudios', 'El «a gente» brasileño y el futuro simple.', [a2m4]),
+    available('a2-m5', 'Tiempo libre y planes', 'Invitar y quedar: topa? 🇧🇷 / alinhas? 🇵🇹.', [a2m5]),
+    available('a2-m6', 'El clima y la casa', 'Está chovendo/a chover; há 🇵🇹 vs tem 🇧🇷 impersonal.', [a2m6]),
+  ],
+};
+
 export const curriculum: Curriculum = {
   levels: [
     a1,
-    plannedLevel(
-      'A2',
-      'A2 — Plataforma',
-      'Hablar del pasado (pretérito perfeito e imperfeito), planes, salud y trabajo.',
-    ),
+    a2,
     plannedLevel(
       'B1',
       'B1 — Umbral',
