@@ -6,7 +6,7 @@ import { FormAudio } from './AudioButton';
 import { VariantBadge } from './VariantBadge';
 
 /** Hoja emergente con la explicación de un símbolo fonético. */
-function IpaSheet({
+export function IpaSheet({
   symbol,
   onClose,
 }: {

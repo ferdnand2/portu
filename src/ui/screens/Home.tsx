@@ -23,7 +23,7 @@ export function Home({
   }, []);
 
   return (
-    <div className="app">
+    <div className="app with-bottom-nav">
       <header className="top-header">
         <h1>Portu</h1>
         <p className="subtitle">Portugués 🇧🇷🇵🇹 para hispanohablantes · MCER</p>
