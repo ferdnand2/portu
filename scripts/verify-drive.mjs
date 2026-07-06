@@ -28,9 +28,9 @@ console.log('TITLE:', await page.title());
 await shot(page, 'home');
 
 // Selector de variante: elegir Portugal y comprobar estado.
-await page.getByRole('button', { name: /Portugal/ }).click();
+await page.locator('.btn.variant', { hasText: 'Portugal' }).click();
 const ptPressed = await page
-  .getByRole('button', { name: /Portugal/ })
+  .locator('.btn.variant', { hasText: 'Portugal' })
   .getAttribute('aria-pressed');
 console.log('VARIANT-PT-PRESSED:', ptPressed);
 
@@ -149,7 +149,7 @@ console.log(
 );
 console.log(
   'AFTER-RELOAD-PT-PRESSED:',
-  await page.getByRole('button', { name: /Portugal/ }).getAttribute('aria-pressed'),
+  await page.locator('.btn.variant', { hasText: 'Portugal' }).getAttribute('aria-pressed'),
 );
 
 // PROBE: localStorage corrupto no debe romper la app.

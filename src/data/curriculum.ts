@@ -20,6 +20,12 @@ import { b1m3 } from './b1/m3';
 import { b1m4 } from './b1/m4';
 import { b1m5 } from './b1/m5';
 import { b1m6 } from './b1/m6';
+import { b2m1 } from './b2/m1';
+import { b2m2 } from './b2/m2';
+import { b2m3 } from './b2/m3';
+import { b2m4 } from './b2/m4';
+import { b2m5 } from './b2/m5';
+import { b2m6 } from './b2/m6';
 
 /**
  * Pensum completo. Los módulos «planned» ya tienen su lugar en la estructura;
@@ -96,16 +102,28 @@ const b1: Level = {
   ],
 };
 
+const b2: Level = {
+  id: 'B2',
+  name: 'B2 — Avanzado',
+  description:
+    'Las joyas del portugués: subjuntivo futuro, infinitivo personal, registro y cultura.',
+  status: 'available',
+  modules: [
+    available('b2-m1', 'El subjuntivo futuro', 'Quando puderes, se tiveres: obligatorio y sin equivalente.', [b2m1]),
+    available('b2-m2', 'El infinitivo personal', 'Para fazermos, antes de saíres: el infinitivo que se conjuga.', [b2m2]),
+    available('b2-m3', 'Argumentar y debatir', 'No entanto, aliás, embora: conectores de nivel.', [b2m3]),
+    available('b2-m4', 'Correos y registro formal', 'Prezados 🇧🇷 / Exmos. 🇵🇹; condicional compuesto.', [b2m4]),
+    available('b2-m5', 'Cultura: -inho y saudade', 'Diminutivos, jeitinho/desenrascar y las dos mesas.', [b2m5]),
+    available('b2-m6', 'Pasivas y estilo indirecto', 'Vende-se, dizem que; reportar con precisión.', [b2m6]),
+  ],
+};
+
 export const curriculum: Curriculum = {
   levels: [
     a1,
     a2,
     b1,
-    plannedLevel(
-      'B2',
-      'B2 — Avanzado',
-      'Matices: subjuntivo futuro (¡joya del portugués!), voz pasiva, debate.',
-    ),
+    b2,
     plannedLevel(
       'C1',
       'C1 — Dominio',

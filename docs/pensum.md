@@ -18,49 +18,45 @@ Principios del curso:
 
 ---
 
-## A1 — Acceso (en desarrollo)
+## A1 — Acceso ✅ implementado completo
 
 | Módulo | Tema | Gramática clave | Divergencias BR/PT destacadas |
 |---|---|---|---|
 | 1 ✅ | Saludos y presentaciones | ser; chamar-se; pronombres de trato | você/tu; me chamo/chamo-me; oi/olá; tchau/adeus |
-| 2 | Números, fechas y horas | horas; dias da semana; ter (edad) | seis/meia (BR al dictar); manhã/tarde usos |
-| 3 | Familia y descripciones | ser vs estar vs ficar; ter; posesivos | uso del artículo con posesivos (PT lo exige más) |
-| 4 | Comida y restaurante | gostar de; querer; pedir | léxico: café da manhã/pequeno-almoço; suco/sumo |
-| 5 | La ciudad y direcciones | haver; ficar; imperativo básico | ônibus/autocarro; trem/comboio; ponto/paragem |
-| 6 | Rutina diaria | presente regular -ar/-er/-ir; reflexivos | estar + gerundio (BR) vs estar a + inf. (PT) ⭐ |
-| 7 | Compras y ropa | demostrativos; este/esse/aquele; precios | legal/fixe; celular/telemóvel |
-| 8 | Viajes y transporte | ir; ir + infinitivo (futuro próximo) | pronunciación: reducción vocálica PT en frases reales |
+| 2 ✅ | Números, fechas y horas | la hora; dias da semana | seis/meia (BR al dictar); quinze para as três / menos um quarto |
+| 3 ✅ | Familia y descripciones | ter (edad); posesivos | artículo con posesivos (o meu pai 🇵🇹 / meu pai 🇧🇷); avô/avó |
+| 4 ✅ | Comida y restaurante | gostar de; queria (cortesía) | café da manhã/pequeno-almoço; suco/sumo; cardápio/ementa |
+| 5 ✅ | La ciudad y direcciones | ficar; contracciones no/na/do/da/ao/à | ônibus/autocarro; trem/comboio; ponto/paragem |
+| 6 ✅ | Rutina diaria | presente regular -ar/-er/-ir | estar + gerundio (BR) vs estar a + inf. (PT) ⭐ |
+| 7 ✅ | Compras y ropa | demostrativos; muito | legal/fixe; celular/telemóvel; l final (legáu 🇧🇷) |
+| 8 ✅ | Viajes y transporte | ir; ir + infinitivo (futuro próximo) | passagem/bilhete; hotel (otéu/otél) |
 
-Módulo 1 implementado: **Lección 1** (saludos y despedidas; obrigado/a;
-você/tu) y **Lección 2** (presentarse; ser; chamar-se y colocación
-pronominal; reducción vocálica y s final).
+## A2 — Plataforma ✅ implementado completo
 
-## A2 — Plataforma
+1. **El pretérito perfeito** — «hoje comi» = «hoy he comido» ⭐.
+2. **El imperfeito** — hábitos; falsos amigos brincar, cachorro/cão.
+3. **Salud y cuerpo** — dói-me 🇵🇹 / estou com dor 🇧🇷; constipação.
+4. **Trabajo y estudios** — «a gente» 🇧🇷; futuro simple; hei de 🇵🇹.
+5. **Tiempo libre y planes** — invitar: topa? 🇧🇷 / alinhas? 🇵🇹; gostaria.
+6. **El clima y la casa** — há 🇵🇹 vs tem 🇧🇷 impersonal; banheiro/casa de banho.
 
-- Pretérito **perfeito** e **imperfeito** (contraste con el español: el
-  perfeito cubre también "he hecho").
-- Futuro simple e "ir + infinitivo"; condicional de cortesía.
-- Temas: salud, trabajo, tiempo libre, clima, biografías.
-- Divergencias: léxico cotidiano masivo (banheiro/casa de banho,
-  geladeira/frigorífico…), "a gente" = nós (BR coloquial), tener que:
-  ter que/ter de.
+## B1 — Umbral ✅ implementado completo
 
-## B1 — Umbral
+1. **Opiniones y subjuntivo presente** — achar/duvidar; tomara 🇧🇷 / oxalá 🇵🇹.
+2. **Consejos e hipótesis** — se eu fosse…; condicional vs imperfeito.
+3. **Pronombres y colocación** ⭐⭐ — te ligo 🇧🇷 / ligo-te 🇵🇹; mesóclisis.
+4. **Medios y tecnología** — tela/ecrã, senha/palavra-passe; voz pasiva.
+5. **Narrar historias** — tinha feito; discurso indirecto; perceber 🇵🇹.
+6. **Viajes e imprevistos** — reclamar; pedir que + subjuntivo; imperativo.
 
-- **Subjuntivo presente**; imperativo completo; pronombres de objeto.
-- Discurso: conectores, opinión, acuerdo/desacuerdo, narrar en pasado.
-- Temas: medios, tecnología, educación, medio ambiente.
-- Divergencias: colocación pronominal en frases complejas; "estar a fazer"
-  vs "estar fazendo" en todos los tiempos; tratamiento formal en cartas.
+## B2 — Avanzado ✅ implementado completo
 
-## B2 — Avanzado
-
-- **Subjuntivo futuro** (quando puderes, se quiseres) — estructura sin
-  equivalente vivo en español, prioridad máxima.
-- Infinitivo personal (para fazermos), voz pasiva, estilo indirecto.
-- Temas: debate, trabajo profesional, cultura de ambos países.
-- Divergencias: registro coloquial brasileño vs europeo; ortografía y
-  pronunciación de cultismos.
+1. **El subjuntivo futuro** ⭐⭐ — quando puderes, se tiveres, o mapa del «si».
+2. **El infinitivo personal** ⭐⭐ — para fazermos, antes de saíres.
+3. **Argumentar y debatir** — embora/apesar de/mesmo que; estructura del ensayo.
+4. **Correos y registro formal** — Prezados 🇧🇷 / Exmos. 🇵🇹; teria feito.
+5. **Cultura** — -inho/-ão, saudade, jeitinho 🇧🇷 / desenrascar 🇵🇹.
+6. **Pasivas y estilo indirecto** — vende-se; transformaciones completas.
 
 ## C1 — Dominio
 

@@ -61,10 +61,14 @@ en `src/data/curriculum.ts`.
 `domain/content.ts`, crear su componente en `ui/exercises/` y añadir el caso
 en `ExerciseView.tsx` (el compilador avisa si falta).
 
-## Estado actual (v0.1)
+## Estado actual (v0.2)
 
-- ✅ A1 · Módulo 1 completo: 2 lecciones con vocabulario, gramática,
-  pronunciación contrastiva y 20 ejercicios.
-- ✅ PWA instalable con soporte offline.
-- ✅ Progreso persistente y elección de variante principal.
-- 🔜 Repaso espaciado (SRS), módulos 2–8 de A1, niveles A2+.
+- ✅ **Niveles A1 a B2 completos**: 26 módulos con lección (vocabulario
+  etiquetado BR/PT con transcripción AFI interactiva, gramática
+  contrastiva, pronunciación comparada y ejercicios).
+- ✅ Práctica generada automáticamente desde el vocabulario (5 ejercicios
+  por palabra, 4 habilidades) + ejercicios curados por lección.
+- ✅ Ejemplos de examen por nivel con enlaces a CAPLE y Acervo Celpe-Bras.
+- ✅ PWA instalable con soporte offline, progreso persistente y elección
+  de variante principal.
+- 🔜 Repaso espaciado (SRS), nivel C1, más lecciones por módulo.
