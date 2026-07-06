@@ -199,6 +199,8 @@ export interface ExamInfo {
   officialBr: string;
   /** Qué evalúan y cómo, en español. */
   description: string;
+  /** Enlaces a exámenes reales de años anteriores y modelos oficiales. */
+  resources?: { label: string; url: string }[];
   /** Preguntas de muestra al estilo del examen. */
   sample: Exercise[];
 }

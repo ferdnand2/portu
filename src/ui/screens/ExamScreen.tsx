@@ -29,6 +29,24 @@ export function ExamScreen({
           <span aria-hidden="true">🇧🇷</span> {exam.officialBr}
         </p>
         <p className="explanation">{exam.description}</p>
+        {exam.resources && exam.resources.length > 0 && (
+          <>
+            <h3 className="resources-title">Exámenes reales de años anteriores</h3>
+            <p className="note">
+              Los enunciados y audios oficiales están publicados por las
+              propias instituciones; practica con ellos en la fuente:
+            </p>
+            <ul className="resources">
+              {exam.resources.map((r) => (
+                <li key={r.url}>
+                  <a href={r.url} target="_blank" rel="noreferrer">
+                    {r.label} ↗
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
       </div>
 
       <ExerciseRunner

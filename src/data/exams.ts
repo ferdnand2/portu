@@ -18,6 +18,16 @@ export const EXAMS: Partial<Record<LevelId, ExamInfo>> = {
       'Celpe-Bras: no certifica A1; este nivel es la base para llegar a su banda mínima (Intermediário ≈ B1).',
     description:
       'A este nivel el examen comprueba supervivencia básica: entender saludos y datos personales, presentarse, rellenar un formulario sencillo y mantener un intercambio muy simple. La muestra siguiente imita ese formato con lo visto en el módulo 1.',
+    resources: [
+      {
+        label: 'CAPLE — exámenes y modelos oficiales (Portugal)',
+        url: 'https://caple.letras.ulisboa.pt/exames',
+      },
+      {
+        label: 'Acervo Celpe-Bras — pruebas reales aplicadas, con audios (Brasil)',
+        url: 'https://www.ufrgs.br/acervocelpebras/',
+      },
+    ],
     sample: [
       {
         id: 'x1',
@@ -114,6 +124,65 @@ export const EXAMS: Partial<Record<LevelId, ExamInfo>> = {
         target: { text: 'Bom dia! Eu sou de Caracas.', variant: 'br' },
         translation: 'Expresión oral: ¡Buenos días! Soy de Caracas.',
       },
+      {
+        id: 'x11',
+        type: 'listen-choice',
+        skill: 'listening',
+        audio: { text: 'Desculpe, pode repetir?', variant: 'pt' },
+        question: '¿Qué te está pidiendo esta persona?',
+        options: [
+          'Que repitas lo que dijiste',
+          'Que te vayas',
+          'Que pagues la cuenta',
+          'Que hables más bajo',
+        ],
+        answer: 0,
+      },
+      {
+        id: 'x12',
+        type: 'read-choice',
+        skill: 'reading',
+        text: 'FICHA DE INSCRIÇÃO\nNome: Ana Martins\nNacionalidade: portuguesa\nProfissão: professora\nMorada: Rua das Flores, 12 — Lisboa',
+        textVariant: 'pt',
+        question: 'Comprensión de formularios: ¿a qué se dedica Ana?',
+        options: ['Es profesora', 'Es estudiante', 'Es médica'],
+        answer: 0,
+      },
+      {
+        id: 'x13',
+        type: 'fill-blank',
+        skill: 'writing',
+        sentence: 'Você ___ espanhol?',
+        accepted: ['fala'],
+        variant: 'br',
+        translation: '¿Hablas español?',
+        hint: 'falar, con você',
+      },
+      {
+        id: 'x14',
+        type: 'order-words',
+        skill: 'writing',
+        words: ['Eu', 'não', 'sou', 'do', 'Brasil'],
+        answer: 'Eu não sou do Brasil',
+        variant: 'both',
+        translation: 'No soy de Brasil',
+      },
+      {
+        id: 'x15',
+        type: 'dictation',
+        skill: 'writing',
+        audio: { text: 'Com licença', variant: 'br' },
+      },
+      {
+        id: 'x16',
+        type: 'translate',
+        skill: 'writing',
+        es: 'mucho gusto',
+        accepted: [
+          { text: 'muito prazer', variant: 'both' },
+          { text: 'prazer', variant: 'both' },
+        ],
+      },
     ],
   },
   A2: {
@@ -123,6 +192,16 @@ export const EXAMS: Partial<Record<LevelId, ExamInfo>> = {
       'Celpe-Bras: A2 aún queda por debajo de su banda mínima (Intermediário ≈ B1).',
     description:
       'El examen A2 añade el pasado: contar qué hiciste, hábitos de antes, compras, salud y planes sencillos. Muestra del estilo de preguntas:',
+    resources: [
+      {
+        label: 'CAPLE — CIPLE (A2): información y modelo de examen',
+        url: 'https://caple.letras.ulisboa.pt/exame/2/ciple',
+      },
+      {
+        label: 'Acervo Celpe-Bras — pruebas reales aplicadas, con audios (Brasil)',
+        url: 'https://www.ufrgs.br/acervocelpebras/',
+      },
+    ],
     sample: [
       {
         id: 'x1',
@@ -164,6 +243,62 @@ export const EXAMS: Partial<Record<LevelId, ExamInfo>> = {
         es: 'ayer',
         accepted: [{ text: 'ontem', variant: 'both' }],
       },
+      {
+        id: 'x5',
+        type: 'listen-choice',
+        skill: 'listening',
+        audio: { text: 'Dói-me a cabeça desde ontem.', variant: 'pt' },
+        question: '¿Qué le pasa a esta persona?',
+        options: [
+          'Le duele la cabeza',
+          'Tiene hambre',
+          'Está muy contenta',
+          'Perdió el tren',
+        ],
+        answer: 0,
+      },
+      {
+        id: 'x6',
+        type: 'read-choice',
+        skill: 'reading',
+        text: 'FARMÁCIA CENTRAL\nAberta todos os dias das 8h às 22h.\nDomingos e feriados: das 9h às 13h.',
+        textVariant: 'both',
+        question: 'Comprensión de avisos: ¿a qué hora cierra los domingos?',
+        options: ['A las 13h', 'A las 22h', 'A las 9h'],
+        answer: 0,
+      },
+      {
+        id: 'x7',
+        type: 'fill-blank',
+        skill: 'writing',
+        sentence: 'Antigamente eu ___ à praia todos os dias.',
+        accepted: ['ia'],
+        variant: 'both',
+        translation: 'Antes iba a la playa todos los días.',
+        hint: 'ir, imperfeito',
+      },
+      {
+        id: 'x8',
+        type: 'order-words',
+        skill: 'writing',
+        words: ['Ontem', 'comprei', 'uns', 'sapatos'],
+        answer: 'Ontem comprei uns sapatos',
+        variant: 'both',
+        translation: 'Ayer compré unos zapatos',
+      },
+      {
+        id: 'x9',
+        type: 'dictation',
+        skill: 'writing',
+        audio: { text: 'Quanto custa?', variant: 'br' },
+      },
+      {
+        id: 'x10',
+        type: 'speak',
+        skill: 'speaking',
+        target: { text: 'Na semana passada fui ao médico.', variant: 'br' },
+        translation: 'La semana pasada fui al médico.',
+      },
     ],
   },
   B1: {
@@ -172,6 +307,16 @@ export const EXAMS: Partial<Record<LevelId, ExamInfo>> = {
     officialBr: 'Celpe-Bras: banda Intermediário (≈ B1), su nivel de entrada.',
     description:
       'En B1 el examen pide opinar, justificar y desenvolverse en imprevistos; entra el subjuntivo presente. Muestra del estilo de preguntas:',
+    resources: [
+      {
+        label: 'CAPLE — DEPLE (B1): información y modelo de examen',
+        url: 'https://caple.letras.ulisboa.pt/exame/3/deple',
+      },
+      {
+        label: 'Acervo Celpe-Bras — pruebas reales aplicadas, con audios (Brasil)',
+        url: 'https://www.ufrgs.br/acervocelpebras/',
+      },
+    ],
     sample: [
       {
         id: 'x1',
@@ -217,6 +362,66 @@ export const EXAMS: Partial<Record<LevelId, ExamInfo>> = {
           { text: 'espero que venhas', variant: 'pt' },
         ],
       },
+      {
+        id: 'x5',
+        type: 'read-choice',
+        skill: 'reading',
+        text: 'Exmos. Senhores,\nEscrevo para reclamar do serviço do vosso restaurante. Embora a comida fosse boa, esperámos mais de uma hora pela mesa que tínhamos reservado.',
+        textVariant: 'pt',
+        question: 'Comprensión de cartas: ¿qué hace quien escribe?',
+        options: [
+          'Reclama por la demora',
+          'Felicita al restaurante',
+          'Pide una receta',
+        ],
+        answer: 0,
+      },
+      {
+        id: 'x6',
+        type: 'fill-blank',
+        skill: 'writing',
+        sentence: 'É importante que ___ cedo à entrevista.',
+        accepted: ['chegues'],
+        variant: 'pt',
+        translation: 'Es importante que llegues temprano a la entrevista.',
+        hint: 'chegar, subjuntivo con tu',
+      },
+      {
+        id: 'x7',
+        type: 'listen-choice',
+        skill: 'listening',
+        audio: { text: 'Se eu fosse você, eu não faria isso.', variant: 'br' },
+        question: '¿Qué está haciendo esta persona?',
+        options: [
+          'Dando un consejo',
+          'Dando una orden',
+          'Agradeciendo',
+          'Despidiéndose',
+        ],
+        answer: 0,
+      },
+      {
+        id: 'x8',
+        type: 'order-words',
+        skill: 'writing',
+        words: ['Duvido', 'que', 'ele', 'venha'],
+        answer: 'Duvido que ele venha',
+        variant: 'both',
+        translation: 'Dudo que él venga',
+      },
+      {
+        id: 'x9',
+        type: 'dictation',
+        skill: 'writing',
+        audio: { text: 'Talvez tenhas razão', variant: 'pt' },
+      },
+      {
+        id: 'x10',
+        type: 'translate',
+        skill: 'writing',
+        es: 'aunque sea difícil',
+        accepted: [{ text: 'embora seja difícil', variant: 'both' }],
+      },
     ],
   },
   B2: {
@@ -225,6 +430,16 @@ export const EXAMS: Partial<Record<LevelId, ExamInfo>> = {
     officialBr: 'Celpe-Bras: banda Intermediário Superior (≈ B2).',
     description:
       'B2 exige argumentar con fluidez y dominar estructuras propias del portugués sin equivalente en español: el subjuntivo futuro y el infinitivo personal. Muestra:',
+    resources: [
+      {
+        label: 'CAPLE — DIPLE (B2): información y modelo de examen',
+        url: 'https://caple.letras.ulisboa.pt/exame/4/diple',
+      },
+      {
+        label: 'Acervo Celpe-Bras — pruebas reales aplicadas, con audios (Brasil)',
+        url: 'https://www.ufrgs.br/acervocelpebras/',
+      },
+    ],
     sample: [
       {
         id: 'x1',
@@ -274,6 +489,70 @@ export const EXAMS: Partial<Record<LevelId, ExamInfo>> = {
         ],
         answer: 0,
       },
+      {
+        id: 'x5',
+        type: 'read-choice',
+        skill: 'reading',
+        text: 'O aumento do trabalho remoto tem transformado as cidades: os bairros centrais esvaziam-se durante a semana, enquanto as zonas residenciais ganham novos cafés e espaços de convívio.',
+        textVariant: 'both',
+        question: 'Según el texto, ¿qué ocurre con los barrios céntricos?',
+        options: [
+          'Pierden movimiento entre semana',
+          'Ganan cafés nuevos',
+          'No cambian',
+        ],
+        answer: 0,
+      },
+      {
+        id: 'x6',
+        type: 'fill-blank',
+        skill: 'writing',
+        sentence: 'Assim que eu ___ o relatório, envio-to.',
+        accepted: ['acabar', 'terminar'],
+        variant: 'pt',
+        translation: 'En cuanto termine el informe, te lo envío.',
+        hint: 'acabar, subjuntivo futuro',
+      },
+      {
+        id: 'x7',
+        type: 'listen-choice',
+        skill: 'listening',
+        audio: { text: 'A reunião foi adiada para a próxima quinta-feira.', variant: 'br' },
+        question: '¿Qué pasó con la reunión?',
+        options: [
+          'Fue aplazada al jueves',
+          'Fue cancelada',
+          'Terminó tarde',
+          'Es hoy',
+        ],
+        answer: 0,
+      },
+      {
+        id: 'x8',
+        type: 'order-words',
+        skill: 'writing',
+        words: ['Trouxe', 'um', 'mapa', 'para', 'não', 'nos', 'perdermos'],
+        answer: 'Trouxe um mapa para não nos perdermos',
+        variant: 'both',
+        translation: 'Traje un mapa para que no nos perdamos (infinitivo personal)',
+      },
+      {
+        id: 'x9',
+        type: 'dictation',
+        skill: 'writing',
+        audio: { text: 'Caso precises de alguma coisa, avisa-me', variant: 'pt' },
+      },
+      {
+        id: 'x10',
+        type: 'translate',
+        skill: 'writing',
+        es: 'cuando puedas',
+        accepted: [
+          { text: 'quando puderes', variant: 'pt' },
+          { text: 'quando você puder', variant: 'br' },
+          { text: 'quando puder', variant: 'both' },
+        ],
+      },
     ],
   },
   C1: {
@@ -282,6 +561,16 @@ export const EXAMS: Partial<Record<LevelId, ExamInfo>> = {
     officialBr: 'Celpe-Bras: banda Avançado / Avançado Superior (≈ C1).',
     description:
       'En C1 se evalúan matices: expresiones idiomáticas, registro formal e informal y comprensión a velocidad nativa. Muestra:',
+    resources: [
+      {
+        label: 'CAPLE — exámenes y modelos oficiales (DAPLE, C1)',
+        url: 'https://caple.letras.ulisboa.pt/exames',
+      },
+      {
+        label: 'Acervo Celpe-Bras — pruebas reales aplicadas, con audios (Brasil)',
+        url: 'https://www.ufrgs.br/acervocelpebras/',
+      },
+    ],
     sample: [
       {
         id: 'x1',
@@ -324,6 +613,67 @@ export const EXAMS: Partial<Record<LevelId, ExamInfo>> = {
         skill: 'speaking',
         target: { text: 'Se calhar amanhã passo por cá.', variant: 'pt' },
         translation: 'A lo mejor mañana me paso por aquí («se calhar» es muy de Portugal).',
+      },
+      {
+        id: 'x5',
+        type: 'read-choice',
+        skill: 'reading',
+        text: 'Vimos por este meio informar V. Exa. de que a sua candidatura foi aceite.',
+        textVariant: 'pt',
+        question: 'Registro: ¿qué tipo de texto es y qué comunica?',
+        options: [
+          'Carta formal: la candidatura fue aceptada',
+          'Mensaje informal entre amigos',
+          'Anuncio publicitario',
+        ],
+        answer: 0,
+      },
+      {
+        id: 'x6',
+        type: 'fill-blank',
+        skill: 'writing',
+        sentence: 'Por mais que eu ___ , não consigo entender o sotaque dele.',
+        accepted: ['tente'],
+        variant: 'br',
+        translation: 'Por más que lo intente, no logro entender su acento.',
+        hint: 'tentar, subjuntivo',
+      },
+      {
+        id: 'x7',
+        type: 'listen-choice',
+        skill: 'listening',
+        audio: { text: 'Ele ficou de mãos atadas diante da situação.', variant: 'br' },
+        question: '¿Qué significa «ficar de mãos atadas»?',
+        options: [
+          'No poder hacer nada',
+          'Lastimarse las manos',
+          'Atar un paquete',
+          'Aplaudir',
+        ],
+        answer: 0,
+      },
+      {
+        id: 'x8',
+        type: 'read-choice',
+        skill: 'reading',
+        text: '— Vais mesmo abrir o restaurante?\n— Vou, mas confesso que tenho medo de dar com os burros n’água.',
+        textVariant: 'pt',
+        question: '¿Qué teme quien responde («dar com os burros n’água»)?',
+        options: ['Fracasar en el intento', 'Mojarse', 'Perder a sus animales'],
+        answer: 0,
+      },
+      {
+        id: 'x9',
+        type: 'dictation',
+        skill: 'writing',
+        audio: { text: 'Quem não arrisca, não petisca', variant: 'pt' },
+      },
+      {
+        id: 'x10',
+        type: 'speak',
+        skill: 'speaking',
+        target: { text: 'Vamos tirar isso a limpo de uma vez por todas.', variant: 'br' },
+        translation: 'Vamos a aclarar esto de una vez por todas.',
       },
     ],
   },

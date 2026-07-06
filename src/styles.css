@@ -795,6 +795,30 @@ p {
   margin: 4px 0;
 }
 
+.resources-title {
+  margin-top: 14px;
+}
+
+.resources {
+  margin: 6px 0 2px;
+  padding-left: 18px;
+}
+
+.resources li {
+  margin: 6px 0;
+  font-size: 0.92rem;
+}
+
+.resources a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.resources a:hover {
+  text-decoration: underline;
+}
+
 .speak-retry {
   display: flex;
   flex-direction: column;
