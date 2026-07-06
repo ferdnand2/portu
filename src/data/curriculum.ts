@@ -1,6 +1,13 @@
 import type { Curriculum, Lesson, Level, Module } from '../domain/content';
 import { leccion1 } from './a1/modulo1/leccion1';
 import { leccion2 } from './a1/modulo1/leccion2';
+import { a1m2 } from './a1/m2';
+import { a1m3 } from './a1/m3';
+import { a1m4 } from './a1/m4';
+import { a1m5 } from './a1/m5';
+import { a1m6 } from './a1/m6';
+import { a1m7 } from './a1/m7';
+import { a1m8 } from './a1/m8';
 
 /**
  * Pensum completo. Los módulos «planned» ya tienen su lugar en la estructura;
@@ -8,13 +15,12 @@ import { leccion2 } from './a1/modulo1/leccion2';
  * El detalle pedagógico de cada módulo está en docs/pensum.md.
  */
 
-const planned = (id: string, title: string, description: string): Module => ({
-  id,
-  title,
-  description,
-  status: 'planned',
-  lessons: [],
-});
+const available = (
+  id: string,
+  title: string,
+  description: string,
+  lessons: Lesson[],
+): Module => ({ id, title, description, status: 'available', lessons });
 
 const a1: Level = {
   id: 'A1',
@@ -30,13 +36,13 @@ const a1: Level = {
       status: 'available',
       lessons: [leccion1, leccion2],
     },
-    planned('a1-m2', 'Números, fechas y horas', 'Contar, preguntar la hora, días y meses.'),
-    planned('a1-m3', 'Familia y descripciones', 'Ser / estar / ter; describir personas.'),
-    planned('a1-m4', 'Comida y restaurante', 'Pedir en un café o restaurante; gustos con «gostar de».'),
-    planned('a1-m5', 'La ciudad y direcciones', 'Preguntar y entender direcciones; haver/ficar.'),
-    planned('a1-m6', 'Rutina diaria', 'Presente de los verbos regulares -ar, -er, -ir; reflexivos.'),
-    planned('a1-m7', 'Compras y ropa', 'Precios, tallas, colores; demostrativos.'),
-    planned('a1-m8', 'Viajes y transporte', 'Billetes, aeropuerto y hotel; ir + infinitivo (futuro próximo).'),
+    available('a1-m2', 'Números, fechas y horas', 'Contar, preguntar la hora, días y meses.', [a1m2]),
+    available('a1-m3', 'Familia y descripciones', 'Ter, la edad, posesivos y descripciones.', [a1m3]),
+    available('a1-m4', 'Comida y restaurante', 'Pedir en un café o restaurante; gustos con «gostar de».', [a1m4]),
+    available('a1-m5', 'La ciudad y direcciones', 'Direcciones, ficar y las contracciones no/na/do/da.', [a1m5]),
+    available('a1-m6', 'Rutina diaria', 'Presente regular y el contraste estrella: fazendo / a fazer.', [a1m6]),
+    available('a1-m7', 'Compras y ropa', 'Precios y demostrativos; legal 🇧🇷 / fixe 🇵🇹.', [a1m7]),
+    available('a1-m8', 'Viajes y transporte', 'Aeropuerto y hotel; ir + infinitivo (futuro próximo).', [a1m8]),
   ],
 };
 

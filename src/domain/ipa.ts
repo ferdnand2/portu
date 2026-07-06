@@ -179,6 +179,13 @@ export const IPA_SYMBOLS: IpaSymbol[] = [
     description: 'Como la ñ española: es el sonido del dígrafo nh («amanhã»).',
     example: { text: 'amanhã', variant: 'both', es: 'mañana' },
   },
+  {
+    symbol: 'ʎ',
+    name: 'll clásica',
+    description:
+      'Como la «ll» española pronunciada a la antigua (o el «gli» italiano): la lengua toca el paladar. Es el sonido del dígrafo lh: «filho», «trabalho».',
+    example: { text: 'filho', variant: 'both', es: 'hijo' },
+  },
   { symbol: 'p', name: 'p', description: 'Como en español.' },
   { symbol: 't', name: 't', description: 'Como en español. En Brasil, ante sonido i se convierte en tʃ.' },
   // ---- consonantes que hay que aprender ----
