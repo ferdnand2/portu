@@ -14,6 +14,12 @@ import { a2m3 } from './a2/m3';
 import { a2m4 } from './a2/m4';
 import { a2m5 } from './a2/m5';
 import { a2m6 } from './a2/m6';
+import { b1m1 } from './b1/m1';
+import { b1m2 } from './b1/m2';
+import { b1m3 } from './b1/m3';
+import { b1m4 } from './b1/m4';
+import { b1m5 } from './b1/m5';
+import { b1m6 } from './b1/m6';
 
 /**
  * Pensum completo. Los módulos «planned» ya tienen su lugar en la estructura;
@@ -74,15 +80,27 @@ const a2: Level = {
   ],
 };
 
+const b1: Level = {
+  id: 'B1',
+  name: 'B1 — Umbral',
+  description:
+    'Opinar, aconsejar, narrar y dominar los pronombres: el salto a la autonomía.',
+  status: 'available',
+  modules: [
+    available('b1-m1', 'Opiniones y subjuntivo', 'Achar, esperar que, talvez; tomara 🇧🇷 / oxalá 🇵🇹.', [b1m1]),
+    available('b1-m2', 'Consejos e hipótesis', 'Se eu fosse…; condicional vs imperfeito.', [b1m2]),
+    available('b1-m3', 'Pronombres y colocación', 'Te ligo 🇧🇷 / ligo-te 🇵🇹: el gran divisor.', [b1m3]),
+    available('b1-m4', 'Medios y tecnología', 'tela/ecrã, senha/palavra-passe; la voz pasiva.', [b1m4]),
+    available('b1-m5', 'Narrar historias', 'Conectores, tinha feito y el discurso indirecto.', [b1m5]),
+    available('b1-m6', 'Viajes e imprevistos', 'Reclamar con subjuntivo e imperativo formal.', [b1m6]),
+  ],
+};
+
 export const curriculum: Curriculum = {
   levels: [
     a1,
     a2,
-    plannedLevel(
-      'B1',
-      'B1 — Umbral',
-      'Opinar y argumentar: subjuntivo presente, condicional, experiencias.',
-    ),
+    b1,
     plannedLevel(
       'B2',
       'B2 — Avanzado',
