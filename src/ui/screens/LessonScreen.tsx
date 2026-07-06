@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import type { LessonLocation } from '../../data/curriculum';
+import { exercisePool } from '../../domain/generateExercises';
 import { ExerciseRunner } from '../exercises/ExerciseRunner';
+import { useProgress } from '../hooks/useProgress';
 import { GrammarSection } from '../sections/GrammarSection';
 import { PronunciationSection } from '../sections/PronunciationSection';
 import { VocabSection } from '../sections/VocabSection';
@@ -23,6 +25,9 @@ export function LessonScreen({
 }) {
   const [tab, setTab] = useState<Tab>('vocab');
   const { lesson, module, level } = location;
+  const { state } = useProgress();
+  const main = state.settings.mainVariant;
+  const pool = useMemo(() => exercisePool(lesson, main), [lesson, main]);
 
   return (
     <div className="app">
@@ -56,7 +61,13 @@ export function LessonScreen({
       {tab === 'vocab' && <VocabSection vocab={lesson.vocab} />}
       {tab === 'grammar' && <GrammarSection grammar={lesson.grammar} />}
       {tab === 'pron' && <PronunciationSection notes={lesson.pronunciation} />}
-      {tab === 'practice' && <ExerciseRunner lesson={lesson} />}
+      {tab === 'practice' && (
+        <ExerciseRunner
+          key={`${lesson.id}-${main}`}
+          contextId={lesson.id}
+          exercises={pool}
+        />
+      )}
     </div>
   );
 }

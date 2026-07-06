@@ -189,3 +189,16 @@ export interface Level {
 export interface Curriculum {
   levels: Level[];
 }
+
+/** Información y muestra de examen para un nivel MCER. */
+export interface ExamInfo {
+  levelId: LevelId;
+  /** Examen oficial de Portugal (red CAPLE) para este nivel. */
+  officialPt: string;
+  /** Correspondencia con el Celpe-Bras brasileño. */
+  officialBr: string;
+  /** Qué evalúan y cómo, en español. */
+  description: string;
+  /** Preguntas de muestra al estilo del examen. */
+  sample: Exercise[];
+}

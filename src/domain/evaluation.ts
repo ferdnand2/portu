@@ -7,7 +7,7 @@
 export function normalize(text: string): string {
   return text
     .toLowerCase()
-    .replace(/[.,;:!?¡¿"“”«»()\-—]/g, ' ')
+    .replace(/[.,;:!?¡¿"“”«»()\-—…]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -58,4 +58,4 @@ export function speechSimilarity(heard: string, target: string): number {
 }
 
 /** Umbral de aprobación para el ejercicio de habla. */
-export const SPEECH_PASS_THRESHOLD = 0.75;
+export const SPEECH_PASS_THRESHOLD = 0.7;

@@ -782,11 +782,45 @@ p {
   flex-shrink: 0;
 }
 
+/* ---- exámenes ---- */
+
+.exam-btn {
+  font-size: 0.85rem;
+  padding: 7px 12px;
+  margin: 2px 0 6px;
+}
+
+.exam-official {
+  font-size: 0.92rem;
+  margin: 4px 0;
+}
+
+.speak-retry {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.speak-outs {
+  display: flex;
+  gap: 8px;
+}
+
+.speak-outs .btn {
+  flex: 1;
+  font-size: 0.85rem;
+  padding: 8px 10px;
+}
+
 /* ---- resumen ---- */
 
 .summary {
   text-align: center;
   padding: 24px 16px;
+}
+
+.summary .btn {
+  margin: 4px 4px 0;
 }
 
 .summary-score {

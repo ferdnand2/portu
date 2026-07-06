@@ -115,25 +115,24 @@ for (const _ of [1, 2]) {
   if (await fallback.count()) {
     await fallback.click();
   } else {
-    // Con reconocimiento "disponible" pero sin voz: dos intentos fallidos.
-    for (let i = 0; i < 2; i++) {
-      const b = page.getByRole('button', { name: /Hablar|Reintentar/ });
-      await b.click();
-      await page.waitForSelector('.feedback, .listening', { timeout: 15000 });
-      await page
-        .waitForSelector('.listening', { state: 'detached', timeout: 20000 })
-        .catch(() => {});
-      if (await page.locator('.btn.continue').count()) break;
+    // Con reconocimiento "disponible" pero sin voz: intento fallido y saltar.
+    const b = page.getByRole('button', { name: /Hablar|Reintentar/ });
+    await b.click();
+    await page.waitForSelector('.speak-retry, .btn.continue', { timeout: 20000 });
+    if (!(await page.locator('.btn.continue').count())) {
+      await page.getByRole('button', { name: /Saltar este ejercicio/ }).click();
     }
   }
   await page.waitForSelector('.btn.continue', { timeout: 20000 });
   await continuar();
 }
 
-// Resumen.
-await page.waitForSelector('.summary');
-console.log('SUMMARY:', await page.locator('.summary-score').textContent());
-await shot(page, 'practica-resumen');
+// Tras los 10 curados, la práctica continúa con los ejercicios generados
+// desde el vocabulario (pool grande).
+await page.waitForSelector('.runner-count');
+const afterTen = await page.locator('.runner-count').textContent();
+console.log('AFTER-10-COUNT:', afterTen); // esperado: «11 / N» con N ≈ 80
+await shot(page, 'practica-continua-generados');
 
 // Volver al inicio: progreso reflejado.
 await page.getByRole('button', { name: 'Volver' }).click();

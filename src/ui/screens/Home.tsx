@@ -1,10 +1,19 @@
 import { useEffect, useState } from 'react';
 import { curriculum } from '../../data/curriculum';
+import { EXAMS } from '../../data/exams';
+import type { LevelId } from '../../domain/content';
+import { exercisePool } from '../../domain/generateExercises';
 import { lessonCompletion } from '../../domain/progress';
 import { tts, type TtsAvailability } from '../../services/tts';
 import { useProgress } from '../hooks/useProgress';
 
-export function Home({ onOpenLesson }: { onOpenLesson: (id: string) => void }) {
+export function Home({
+  onOpenLesson,
+  onOpenExam,
+}: {
+  onOpenLesson: (id: string) => void;
+  onOpenExam: (levelId: LevelId) => void;
+}) {
   const { state, setVariant } = useProgress();
   const [voices, setVoices] = useState<TtsAvailability | null>(null);
   const main = state.settings.mainVariant;
@@ -66,6 +75,15 @@ export function Home({ onOpenLesson }: { onOpenLesson: (id: string) => void }) {
             {level.status === 'planned' && <span className="chip soon">Próximamente</span>}
           </div>
           <p className="level-desc">{level.description}</p>
+          {EXAMS[level.id] && (
+            <button
+              type="button"
+              className="btn exam-btn"
+              onClick={() => onOpenExam(level.id)}
+            >
+              📝 Ejemplo de examen {level.id}
+            </button>
+          )}
           {level.modules.map((module) => (
             <div
               className={`card module ${module.status === 'planned' ? 'planned' : ''}`}
@@ -77,7 +95,8 @@ export function Home({ onOpenLesson }: { onOpenLesson: (id: string) => void }) {
                 <span className="chip soon">Próximamente</span>
               ) : (
                 module.lessons.map((lesson, i) => {
-                  const { done, total } = lessonCompletion(state, lesson);
+                  const pool = exercisePool(lesson, main);
+                  const { done, total } = lessonCompletion(state, lesson.id, pool);
                   return (
                     <button
                       type="button"

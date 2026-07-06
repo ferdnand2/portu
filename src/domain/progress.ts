@@ -3,7 +3,6 @@
  * Las mutaciones son inmutables: devuelven un estado nuevo, nunca modifican
  * el anterior. La persistencia vive en `services/storage.ts`.
  */
-import type { Lesson } from './content';
 
 /** Variante que el estudiante practica activamente. */
 export type MainVariant = 'br' | 'pt';
@@ -55,9 +54,10 @@ export interface LessonCompletion {
 
 export function lessonCompletion(
   state: ProgressState,
-  lesson: Lesson,
+  contextId: string,
+  pool: readonly { id: string }[],
 ): LessonCompletion {
-  const done = state.completed[lesson.id] ?? [];
-  const valid = lesson.exercises.filter((e) => done.includes(e.id)).length;
-  return { done: valid, total: lesson.exercises.length };
+  const done = state.completed[contextId] ?? [];
+  const valid = pool.filter((e) => done.includes(e.id)).length;
+  return { done: valid, total: pool.length };
 }
